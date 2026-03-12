@@ -22,7 +22,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installer les dépendances de production uniquement
-RUN npm ci --only=production && \
+RUN npm install --production && \
     npm cache clean --force
 
 # Copier le code source
